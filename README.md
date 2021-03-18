@@ -2,7 +2,7 @@ Python_Practice
 ================
 Python을 보다 원활하게 다루기 위한 연습장입니다.
 
-  "Life is too short. You need python."
+  ' "Life is too short. You need python." '
 
 위 repo는 다음과 같은 내용들을 다룹니다. 
 
