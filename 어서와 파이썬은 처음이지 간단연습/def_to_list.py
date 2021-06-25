@@ -1,3 +1,5 @@
+# 함수 ~ list 까지 
+
 ### lambda식 활용
 ## lambda(무명 함수): 이름은 없고 몸체만 있는 함수
 ## 활용: lambda 인수1, 인수2, ... : 수식
@@ -186,7 +188,7 @@ print(dummy)
 '''
 
 ### 지뢰찾기 판 만들기
-
+'''
 import random
 
 # 빈 지뢰찾기 판 만들기
@@ -206,5 +208,5 @@ for i in range(10):
         else:
             print('. ', end=' ')
     print()
-
+'''
 
