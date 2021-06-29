@@ -27,7 +27,7 @@ else:
     print("잘못 입력하셨습니다.")
 
 # 방법2
-if kor < 0 or kor > 100 or math < 0 or math > 100 or eng < 0 eng > 100:
+if kor < 0 or kor > 100 or math < 0 or math > 100 or eng < 0 or eng > 100:
     print("잘못 입력하셨습니다.")
 elif avg >= 80:
     print("불합격")
