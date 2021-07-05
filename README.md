@@ -10,7 +10,8 @@ Python을 보다 원활하게 다루기 위한 연습장입니다.
 
 1. Python 기본 문법
   - '어서와 파이썬은 처음이지' 간단 예제
-  - Gallag Game 만들기 
+  - 동영상 강의를 통해 공부한 내용 
+  - Gallag Game 만들기
 2. Numpy 활용
 3. Pandas 활용
 4. matplotib 활용 (그래프, 시각화)
