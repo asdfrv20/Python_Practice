@@ -33,3 +33,5 @@ elif avg >= 80:
     print("불합격")
 else:
     print("합격")
+
+
