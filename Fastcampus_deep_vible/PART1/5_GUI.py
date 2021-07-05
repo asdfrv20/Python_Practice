@@ -1,4 +1,6 @@
 # Tkinter로 승차권 예제를 GUI로 만들기 
+## 작성 프로그램: 승차역별로 요금을 관리하는 프로그램 
+
 # import Lib
 from tkinter import Tk, ttk, Label, Button, Text, END
 
@@ -10,10 +12,11 @@ stationfares = [
     {'station': "소요산", 'fare': 2500}
 ]
 
-selected_index = 0     # 선택하는 인덱스를 0으로 설정 
+selected_index = 0     # selected_index: 선택하는 항목의 인덱스를 저장하는 전역변수(default:0) 
 
-# 이벤트 함수 선언 및 정의 
-def stationfares_selected(event):  # stationfares_selected만 다른 이벤트 함수들과는 다르고 event를 입력으로 받아야 한다. 
+# 이벤트 함수들 정의 
+def stationfares_selected(event):  
+    # stationfares_selected만 다른 이벤트 함수들과는 다르고 event를 입력으로 받아야 한다. 
     # tree에서 하나가 선택되면 해당 데이터가 station과 fare값에 나누어 들어가고 
     # 선택된 항목은 tree에서 지워지도록 동작해주는 함수
     # 교육목적상 아래 부분에서 잘 실행되지 않도록 설정하셨다고 함. 
@@ -67,7 +70,7 @@ window.geometry("600x600")      # window의 크기(강사님이 설정하심)
 window.resizable(0,0)           # resizable(0,0): 화면크기가 변하는것을 방지?
 title = "정류장 요금관리"        # title: 화면에 출력될 제목 내용
 lbl_title = Label(window, text=title, font=("돋움체",20))       #Label(대상객체, text='들어갈 내용', font=("글자체",폰트사아즈)): 화면에 이름을 써주는 tkinter 명령어
-lbl_title.pack(padx=5, pady=15) # pack: 패딩값을 주는 것?
+lbl_title.pack(padx=5, pady=15) # pack: 패딩값을 주는 것(x축 y축 여백)
         # 여기까지하고 화면 확인해보기 
         # 이제 여기에서부터 인형에 눈을 붙이듯이 하나씩 만들어 나갈 것임
 
@@ -93,7 +96,6 @@ treeStationfares.place(x=100, y=100, width=400, height=250)     # treeStationfar
 ## 여기에서부터 이벤트에 해당하는 함수인 stationfares_selected, insert_content, update_content, delete_content는 우리가 만들어 주어야한다. 
 ## 이 함수들은 맨위에 초기 변수들이 선언된 곳에 만들어주자
 treeStationfares.bind("<<TreeviewSelect>>", stationfares_selected)  # treeview가 selected 되었을 때, stationfares_selected(함수)라는 이벤트가 발생함
-
 
 # 버튼 만들기 (Insert, Update, Delete 버튼 만들기 )
 ## Botton: tkinter에서 버튼을 생성하는 class
