@@ -32,3 +32,8 @@ total = pull_up[0] + pull_up[1] + pull_up[2] + pull_up[3] \
 average = total/7
 
 print(average)
+
+# for문 답안
+for i in range(1, 101):
+    x = int(input(i, "일차 턱걸이 횟수"))
+    pull_up.append(x)
