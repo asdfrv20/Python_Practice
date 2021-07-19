@@ -23,6 +23,7 @@ stock_c = {
 # print(stock_c)
 
 # 딕셔너리 접근하기 
+print("-딕셔너리 접근하기")
 print(stock_a['삼성전자'])
 print(stock_c['삼성전자']['보유수량'])
 
