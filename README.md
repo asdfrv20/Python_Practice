@@ -15,10 +15,16 @@ Python을 보다 원활하게 다루기 위한 연습장입니다.
 2. Numpy 활용
 3. Pandas 활용
 4. matplotib 활용 (그래프, 시각화)
+5. Scraping
+  - Scraping(requests 활용)
+  - Parsing(BeautifulSoup 활용)
+  - Manipulation: 내가 원하는 데이터 가공
 (이후 추가될 수 있습니다.)
 
 -------------------------------
 
 참고서적: 파이썬 라이브러리를 활용한 데이터 분석(저자: 웨스 맥키니, 한빛미디어)
+참고사이트: FastCampus 수강 강의 연습 
+
 
 
