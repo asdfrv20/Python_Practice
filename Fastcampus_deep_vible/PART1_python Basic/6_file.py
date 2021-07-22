@@ -67,6 +67,7 @@ def delete_content():
     stationfares.pop(selected_index)
     setTreeItems()
 
+# 이 파일 핵심내용: save_content
 def save_content():
     '''
     stationfares.json 파일에 현재 stationfares의 데이터를 저장(Save)하는 함수 
