@@ -1,15 +1,12 @@
-import math
 import copy
 
 N = int(input())
 
 # 숫자를 자릿수 별로 나누는 알고리즘
-digit = int(math.log10(N)) + 1
 
 # N의 가장 작은 생성자를 구하는 알고리즘 
 result = N
 temp = 0
-# for number in range(N-9*digit ,N-3):
 for number in range(N):
     dummy = copy.copy(number)
     split_numbers = []

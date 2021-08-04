@@ -29,6 +29,7 @@ else:
 
 print(post_list[0].get_title())
 
+
 # @ - 게시글 쓰기
 def write_post():
     """게시글 쓰기 함수"""
@@ -41,9 +42,37 @@ def write_post():
     post_list.append(post)
     print("# 게시글이 등록되었습니다.")
 
+
+# @ - 게시글 목록 
 def list_post():
     """게시글 목록 함수"""
-    print(post_list)
+    # 글번호 선택
+    # 현재 게시글 목록 출력 
+    print("\n\n- 게시글 목록 -")
+    id_list = []
+    for post in post_list:
+        print("번호 :", post.get_id())
+        print("제목 :", post.get_title())
+        print("조회수 :", post.get_view_counts(), "\n")
+        id_list.append(post.get_id())
+
+    while True:
+        try:
+            id = int(input("Q) 글 번호를 선택해 주세요 (메뉴로 돌아가려면 -1을 입력)\n>>> "))
+            if id in id_list:
+                print("게시글 상세보기")
+            elif id == -1:
+                print("메뉴로 돌아갑니다")
+                break
+            else:
+                print("없는 글 번호입니다.")
+        except ValueError:
+            print("숫자를 입력해주세요")
+
+
+# @ - 게시글 상세
+def open_content():
+    print("게시글 상세")
 
 
 # @ - 메뉴 출력하기 
