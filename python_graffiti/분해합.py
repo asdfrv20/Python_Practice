@@ -2,8 +2,6 @@ import copy
 
 N = int(input())
 
-# 숫자를 자릿수 별로 나누는 알고리즘
-
 # N의 가장 작은 생성자를 구하는 알고리즘 
 result = N
 temp = 0
