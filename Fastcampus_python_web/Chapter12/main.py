@@ -60,7 +60,8 @@ def list_post():
         try:
             id = int(input("Q) 글 번호를 선택해 주세요 (메뉴로 돌아가려면 -1을 입력)\n>>> "))
             if id in id_list:
-                print("게시글 상세보기")
+                detail_post(id)
+                break
             elif id == -1:
                 print("메뉴로 돌아갑니다")
                 break
@@ -70,9 +71,51 @@ def list_post():
             print("숫자를 입력해주세요")
 
 
-# @ - 게시글 상세
-def open_content():
-    print("게시글 상세")
+# @ - 게시글 상세페이지 확인
+def detail_post(id):
+    """ 게시글 상세 보기 함수 """
+    print("\n\n- 게시글 상세 -")
+
+    for post in post_list:
+        if post.get_id() == id:
+            # 조회수 1증가
+            post.add_view_count()
+            print("번호 : ", post.get_id())
+            print("제목 : ", post.get_title())
+            print("본문 : ", post.get_content())
+            print("조회수 : ", post.get_view_counts())
+            targetpost = post
+
+    while True:
+        print("Q) 수정: 1 삭제:2 (메뉴로 돌아가려면 -1을 입력)")
+        try:
+            choice = int(input(">>>"))
+            if choice == 1:
+                updata_post(targetpost)
+                break
+            elif choice == 2:
+                delete_post(targetpost)
+                break
+            elif choice == -1:
+                break
+            else:
+                print("잘못 입력하였습니다.")
+        except ValueError:
+            print("숫자를 입력해 주세요.")
+
+# @ - 게시글 수정 
+def update_post(targetpost):
+    """게시글 수정 함수"""
+    print("\n\n- 게시글 수정 -")
+    title = input(f"제목을 입력해 주세요>>> ")
+    for post in post_list:
+
+
+# @ - 게시글 삭제
+def delete_post(targetpost):
+    """게시글 삭제 함수"""
+    
+
 
 
 # @ - 메뉴 출력하기 
