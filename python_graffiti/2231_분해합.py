@@ -1,3 +1,6 @@
+# 브루트 포스
+# 백준 - 2231번
+
 import copy
 
 N = int(input())
