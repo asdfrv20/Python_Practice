@@ -32,7 +32,7 @@ class Dragon(Monster):
     # 생성자 오버라이딩
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)  # 부모클래스의 생성자(__init__) 속성값 가져오기, 형식: super().__init__(가지고올 속성값들의 이름(self는 안써도 됨.))
-        self.skills = ("불품기", "꼬리치기", "날개치기")
+        self.skills = ("불뿜기", "꼬리치기", "날개치기")
 
     def move(self):
         print(f"[{self.name}] 날기")
