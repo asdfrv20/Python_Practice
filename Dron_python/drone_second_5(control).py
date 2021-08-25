@@ -3,7 +3,7 @@ from e_drone.drone import *
 
 drone = Drone()
 
-drone.open("COM7")      # drone 통신 연결
+drone.open("COM6")      # drone 통신 연결
 
 print("TakeOff")
 drone.sendTakeOff()     # 이륙 
@@ -70,11 +70,19 @@ drone.sendControlWhile(0, 0, 0, 0, 600)
 '''
 
 # 왼쪽플립
-drone.sendControlWhile(0,0,0,100,3000)
-drone.sendControlWhile(0,50,0,0, 2000)
-drone.sendFlightEvent(FlightEvent.FlipLeft)
+
+drone.sendControlWhile(0,0,0,0, 3000)       # 호버링
+
+drone.sendControlWhile(0,50,0,0 ,1000)      # 가속을 위한 시간 
 time.sleep(1)
 
+drone.sendFlightEvent(FlightEvent.FlipFront) #  플립하기 
+time.sleep(2)
+drone.sendControlWhile(0,0,0,0,3000)        # 플립 후 3초간 호버링 
+
+drone.sendControlWhile(0,-50,0,0,1000)
+time.sleep(1)
+drone.sendFlightEvent(FlightEvent.FlipRear)
 drone.sendControlWhile(0,0,0,0,3000)
 
 print("Landing")
